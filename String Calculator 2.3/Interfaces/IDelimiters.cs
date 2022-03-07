@@ -3,7 +3,5 @@
     public interface IDelimiters
     {
         List<string> GetDelimiters(string numbers);
-        List<string> CustomDelimiter(string numbers);
-        List<string> MultipleDelimiters(string numbers);
     }
 }

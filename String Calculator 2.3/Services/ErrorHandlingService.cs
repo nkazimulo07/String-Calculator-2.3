@@ -6,7 +6,9 @@ namespace String_Calculator_2._3.Services
     {
         public void ThrowNumbersTooLargeException(string bigNumbers)
         {
-            throw new Exception(Constants.errorMessageTemplate + bigNumbers);
+            string errorMessageTemplate = "You can't subtract numbers greater than 1000 :" + bigNumbers;
+
+            throw new Exception(errorMessageTemplate);
         }
     }
 }

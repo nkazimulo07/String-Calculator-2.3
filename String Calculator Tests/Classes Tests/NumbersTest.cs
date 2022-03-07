@@ -66,15 +66,15 @@ namespace String_Calculator_Tests
         {
             // arrange
             var input = new List<int> { 4000, 1000, 5000 };
-            string expected = "You can't subtract numbers greater than 1000 : 4000 1000 5000 ";
+            string expectedExceptionMessage = "You can't subtract numbers greater than 1000 : 4000 1000 5000 ";
 
-            _errorHandlingMock.When(_numbers => _numbers.ThrowNumbersTooLargeException(Arg.Any<string>())).Do(x => throw new Exception(expected));
+            _errorHandlingMock.When(_numbers => _numbers.ThrowNumbersTooLargeException(Arg.Any<string>())).Do(x => throw new Exception(expectedExceptionMessage));
 
             //act
             var results = Assert.Throws<System.Exception>(() => _numbersService.CheckForNumbersGreaterThanOneThousand(input));
 
             //assert
-            Assert.AreEqual(expected, results.Message);
+            Assert.AreEqual(expectedExceptionMessage, results.Message);
         }
     }
 }

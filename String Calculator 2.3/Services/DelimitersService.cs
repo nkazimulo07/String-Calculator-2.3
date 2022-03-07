@@ -16,7 +16,7 @@ namespace String_Calculator_2._3.Services
             return delimiters;
         }
 
-        public List<string> CustomDelimiter(string numbers)
+        private List<string> CustomDelimiter(string numbers)
         {
             var delimiter = numbers.Substring(numbers.IndexOf(Constants.HashTags) + 2, numbers.IndexOf(Constants.NewLine) - 2);
             var delimiters = new List<string>();
@@ -33,7 +33,7 @@ namespace String_Calculator_2._3.Services
             return delimiters;
         }
 
-        public List<string> MultipleDelimiters(string delimiters)
+        private List<string> MultipleDelimiters(string delimiters)
         {
             char leftseperator = delimiters[0];
             char rightseperator = delimiters[delimiters.Length - 1];
