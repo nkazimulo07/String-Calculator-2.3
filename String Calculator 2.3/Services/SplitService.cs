@@ -15,7 +15,7 @@ namespace String_Calculator_2._3.Services
         {
             var delimiters = _delimiters.GetDelimiters(numbers);
 
-            if (numbers.StartsWith(Constants.HashTags) || numbers.StartsWith(Constants.Flag))
+            if (numbers.StartsWith(Constants.HashTags) || numbers.StartsWith(Constants.DelimiterFlag))
             {
                 numbers = numbers.Substring(numbers.LastIndexOf(Constants.NewLine) + 1);
 

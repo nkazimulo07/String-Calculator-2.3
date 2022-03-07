@@ -15,7 +15,7 @@ namespace String_Calculator_Tests
         }
 
         [Test]
-        public void Given__When__Returns()
+        public void Given_NumbersList_When_PerformingCalculations_ReturnsDifference()
         {
             //arrange
             var input = new List<int>() { 1, 40, 777};

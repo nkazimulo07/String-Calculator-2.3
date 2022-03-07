@@ -17,18 +17,18 @@ namespace String_Calculator_2._3.Services
 
             foreach (var number in numbers)
             {
-                var temporalNumber = 0;
+                var numberToAddToList = 0;
 
                 if (char.IsLetter(number[0]))
                 {
-                    temporalNumber = ConvertCharacterToInt(char.Parse(number));
+                    numberToAddToList = ConvertCharacterToInt(char.Parse(number));
                 }
                 else if (char.IsDigit(number[0]))
                 {
-                    temporalNumber = Math.Abs(Convert.ToInt32(number));
+                    numberToAddToList = Math.Abs(Convert.ToInt32(number));
                 }
 
-                numbersList.Add(temporalNumber);
+                numbersList.Add(numberToAddToList);
             }
 
             CheckForNumbersGreaterThanOneThousand(numbersList);
@@ -54,11 +54,11 @@ namespace String_Calculator_2._3.Services
             }
         }
 
-        public int ConvertCharacterToInt(char alphebet)
+        public int ConvertCharacterToInt(char character)
         {
-            var number = char.ToUpper(alphebet) - 65;
+            var number = character - Constants.Character;
 
-            if (number > Constants.BigNumber)
+            if (number > Constants.LettersMaximumValue)
             {
                 return 0;
             }

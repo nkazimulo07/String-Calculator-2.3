@@ -14,6 +14,7 @@ namespace String_Calculator_2._3
             _calculations = calculations;
             _split = split;
         }
+
         public int Subtract(string numbers)
         {
             if (string.IsNullOrEmpty(numbers))
